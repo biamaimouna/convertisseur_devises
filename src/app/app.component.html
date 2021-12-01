@@ -1,24 +1,35 @@
-<nav>
-  <ul>
-    <li><a href="#">{{depart}}</a>
-      <ul>
-        <a *ngFor="let devise of listeDevise" (click)="setDeviseDepart(devise)">{{devise}}</a>
-      </ul>
-    </li>
-  </ul>
+<div class="classe3">
+  <h2>Convertisseur des devises</h2>
+</div>
 
-  <ul>
-    <li><a href="#">{{arrivee}}</a>
+<div class="classe0">
+  <nav>
+    <div class="classe1">
       <ul>
-        <a *ngFor="let devise of listeDevise" (click)="setDeviseArrivee(devise)">{{devise}}</a>
+        <li><a href="#" class="classe2">{{depart}}</a>
+          <ul>
+            <a *ngFor="let devise of listeDevise" (click)="setDeviseDepart(devise)">{{devise}} <br></a>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-</nav>
-
-<br>
-<br>
-<br>
-<input type="text" value='{{ value2 | convert: arrivee: depart}}' [(ngModel)]='value'>
-<br>
-<input type="text" value='{{ value | convert: depart: arrivee}}' [(ngModel)]='value2'>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#" class="classe2">{{arrivee}}</a>
+          <ul>
+            <a *ngFor="let devise of listeDevise" (click)="setDeviseArrivee(devise)">{{devise}} <br></a>
+          </ul>
+        </li>
+      </ul>
+    </div>    
+  </nav>
+  
+  <br>
+  <br>
+  <br>
+  <div class="box">
+    <input type="text" value='{{ value2 | convert: arrivee: depart}}' [(ngModel)]='value'>
+    <input type="text" value='{{ value | convert: depart: arrivee}}' [(ngModel)]='value2'>    
+  </div>
+  
+</div>
